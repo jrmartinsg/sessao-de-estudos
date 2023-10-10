@@ -1,0 +1,388 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #000000;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-family: Verdana, Tahoma, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 100vh;
+    padding: 20px 50px;
+}
+
+#containerCheck {
+    display: flex;
+    gap: 50px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulos {
+    color: #ffa500;
+    font-size: 4rem;
+    text-align: center;
+}
+
+#containerCheck div {
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    padding: 40px;
+    display: grid;
+    grid-template: auto / auto auto;
+    gap: 20px;
+}
+
+input {
+    width: 20px;
+}
+
+span {
+    font-size: 0.8rem;
+}
+
+.botoes {
+    background-color: #ffa500;
+    font-size: 1.2rem;
+    padding: 10px 40px;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    color: #000000;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#containerTempo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7rem;
+}
+
+#cronometro {
+    font-size: 9rem;
+    font-weight: bold;
+}
+
+#carregando {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    border: solid #ffa500 7px;
+    border-top: solid #ffffff 7px;
+    animation: load 1.5s linear infinite;
+}
+
+@keyframes load {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#containerSessao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6rem;
+}
+
+#totalSessao {
+    text-align: center;
+    font-size: 7rem;
+    font-weight: bold;
+    padding: 10px 40px;
+    border: 2px solid #ffa500;
+    border-radius: 10px;
+}
+
+.btns-sessao {
+    display: flex;
+    gap: 40px;
+}
+
+#containerIntervalo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6rem;
+}
+
+#timerIntervalo {
+    font-size: 9rem;
+    font-weight: bold;
+    padding: 0 40px;
+}
+
+#containerEncerrado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6rem;
+}
+
+.totalEncerrado {
+    width: 18rem;
+    height: 13rem;
+    border: 2px solid#ffffff;
+    border-radius: 10px;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 45px;
+}
+
+.totalEncerrado p {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+@media screen and (max-width:1050px) {
+    #cronometro {
+        font-size: 7rem;
+    }
+
+    #totalSessao {
+        font-size: 6rem;
+        padding: 10px 20px;
+    }
+}
+
+@media screen and (max-width:900px) {
+    #containerSessao {
+        gap: 4rem;
+    }
+
+    #containerSessao h1 {
+        font-size: 3rem;
+    }
+
+    #totalSessao {
+        font-size: 5rem;
+        padding: 10px 15px;
+    }
+}
+
+@media screen and (max-width:780px) {
+    #cronometro {
+        font-size: 5.5rem;
+    }
+
+    #containerSessao {
+        gap: 3rem;
+    }
+
+    #containerSessao h1 {
+        font-size: 2.5rem;
+    }
+
+    #totalSessao {
+        font-size: 4rem;
+        padding: 10px 15px;
+    }
+}
+
+@media screen and (max-width:650px) {
+    #totalSessao {
+        font-size: 3rem;
+        padding: 10px 15px;
+    }
+
+    .btns-sessao button {
+        font-size: 1rem;
+    }
+
+    #timerIntervalo {
+        font-size: 8rem;
+    }
+}
+
+@media screen and (max-width:610px) {
+    body {
+        padding: 20px;
+    }
+
+    .titulos {
+        font-size: 3rem;
+    }
+
+    #containerTempo {
+        gap: 3.5rem;
+    }
+
+    #cronometro {
+        font-size: 4.5rem;
+    }
+
+    #containerIntervalo {
+        gap: 3rem
+    }
+
+    #timerIntervalo {
+        font-size: 7rem;
+    }
+
+    #containerIntervalo button {
+        font-size: 0.9rem;
+        padding: 10px 15px;
+    }
+
+    #containerEncerrado {
+        gap: 3rem;
+    }
+}
+
+@media screen and (max-width:485px) {
+    body {
+        padding: 10px 25px;
+    }
+
+    #containerCheck {
+        gap: 25px;
+    }
+
+    .titulos {
+        font-size: 2.5rem;
+    }
+
+    #btn-parar {
+        font-size: 1rem;
+    }
+
+    #containerSessao {
+        gap: 2.5rem;
+    }
+
+    #totalSessao {
+        font-size: 2.7rem;
+        padding: 5px;
+    }
+
+    .btns-sessao {
+        gap: 1rem;
+    }
+
+    .btns-sessao button {
+        padding: 10px 15px;
+    }
+
+    #timerIntervalo {
+        font-size: 6rem;
+    }
+
+    #btn-novaSessao {
+        font-size: 0.9rem;
+        padding: 10px 15px;
+    }
+}
+
+@media screen and (max-width:440px) {
+    #cronometro {
+        font-size: 3.5rem;
+    }
+
+    #totalSessao {
+        font-size: 2.5rem;
+    }
+
+    #timerIntervalo {
+        font-size: 4.5rem;
+    }
+
+    .dadosContainer {
+        width: 15rem;
+        height: 12rem;
+    }
+
+    .dadosContainer p {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width:370px) {
+    .titulos {
+        font-size: 2rem;
+    }
+
+    #containerCheck div {
+        padding: 25px 15px;
+        gap: 12px;
+    }
+
+    input {
+        width: 15px;
+    }
+
+    span {
+        font-size: 0.6rem;
+    }
+
+    #cronometro {
+        font-size: 2.5rem;
+    }
+
+    #btn-parar {
+        font-size: 0.8rem;
+    }
+
+    #totalSessao {
+        font-size: 2rem;
+    }
+
+    .btns-sessao button {
+        font-size: 0.7rem;
+    }
+}
+
+@media screen and (max-width:310px) {
+    .titulos {
+        font-size: 1.7rem;
+    }
+
+    .botoes {
+        font-size: 0.8rem;
+        padding: 10px 25px;
+    }
+
+    #containerSessao h1 {
+        font-size: 2rem;
+    }
+
+    #totalSessao {
+        font-size: 1.5rem;
+    }
+
+    .btns-sessao button {
+        font-size: 0.5rem;
+    }
+
+    #timerIntervalo {
+        font-size: 4rem;
+    }
+}
+
+@media screen and (max-width:280px) {
+    .titulos {
+        font-size: 1.5rem;
+    }
+
+    span {
+        font-size: 0.5rem;
+    }
+
+    #cronometro {
+        font-size: 2rem;
+    }
+}

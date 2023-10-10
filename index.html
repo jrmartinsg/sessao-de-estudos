@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronômetro Para Estudos</title>
+    <link rel="shortcut icon" href="./img/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+
+<body>
+    <section id="containerCheck">
+        <h1 class="titulos">Check-List Pré-Estudos</h1>
+        <div>
+            <input type="checkbox" name="sessão">
+            <span>Sessão De 01:30 = 90mins</span>
+            <input type="checkbox" name="ambiente">
+            <span>Ambiente Sem Distrações</span>
+            <input type="checkbox" name="acessórios">
+            <span>Acessórios Essenciais</span>
+            <input type="checkbox" name="água">
+            <span>Água Para Hidratação</span>
+            <input type="checkbox" name="notas">
+            <span>Notas De Alívio</span>
+            <input type="checkbox" name="celular">
+            <span>Sem Celular</span>
+        </div>
+        <button id="btn-ok" class="botoes">OK</button>
+    </section>
+    <section id="containerTempo" style="display: none;">
+        <span id="contagem"></span>
+        <h2 id="cronometro" style="display: none;"></h2>
+        <button id="btn-parar" class="botoes" style="display: none;">Parar</button>
+    </section>
+    <div id="carregando" style="display: none;"></div>
+    <section id="containerSessao" style="display: none;">
+        <h1 class="titulos">Sessão De Estudos</h1>
+        <h3 id="totalSessao"></h3>
+        <div class="btns-sessao">
+            <button id="btn-intervalo" class="botoes">Intervalo</button>
+            <button onclick="estudosEncerrados()" class="botoes">Finalizar</button>
+        </div>
+    </section>
+    <section id="containerIntervalo" style="display: none;">
+        <h1 class="titulos">Intervalo</h1>
+        <h2 id="timerIntervalo"></h2>
+        <button onclick="estudosEncerrados()" class="botoes">Finalizar</button>
+    </section>
+    <section id="containerEncerrado" style="display: none;">
+        <h1 class="titulos">Dados Da Sessão</h1>
+        <div class="totalEncerrado">
+            <p id="estudando"></p>
+            <p id="tempoIntervalo"></p>
+            <p id="total"></p>
+        </div>
+        <button id="btn-novaSessao" class="botoes">Nova Sessão</button>
+    </section>
+    <script src="./script/check-list.js"></script>
+    <script src="./script/cronometro.js"></script>
+    <script src="./script/sessao.js"></script>
+    <script src="./script/intervalo.js"></script>
+    <script src="./script/encerrado.js"></script>
+</body>
+
+</html>
