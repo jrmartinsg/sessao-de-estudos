@@ -14,7 +14,7 @@
         <h1 class="titulos">Check-List Pré-Estudos</h1>
         <div>
             <input type="checkbox" name="sessão">
-            <span>Sessão De 01:30 = 90mins</span>
+            <span>Sessão De 90mins</span>
             <input type="checkbox" name="ambiente">
             <span>Ambiente Sem Distrações</span>
             <input type="checkbox" name="acessórios">
@@ -31,7 +31,7 @@
     <section id="containerTempo" style="display: none;">
         <span id="contagem"></span>
         <h2 id="cronometro" style="display: none;"></h2>
-        <button id="btn-parar" class="botoes" style="display: none;">Parar</button>
+        <button onclick="btnClick()" id="btn-parar" class="botoes" style="display: none;">Parar</button>
     </section>
     <div id="carregando" style="display: none;"></div>
     <section id="containerSessao" style="display: none;">
@@ -43,7 +43,6 @@
         </div>
     </section>
     <section id="containerIntervalo" style="display: none;">
-        <h1 class="titulos">Intervalo</h1>
         <h2 id="timerIntervalo"></h2>
         <button onclick="estudosEncerrados()" class="botoes">Finalizar</button>
     </section>

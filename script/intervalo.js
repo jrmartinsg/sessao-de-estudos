@@ -18,6 +18,7 @@ btn_intervalo.addEventListener('click', function () {
         tempo_intervalo.setAttribute('style',
             'padding: 5px 20px; border: 2px solid orange; border-radius: 10px; transition: 800ms;')
         tempo_intervalo.innerText = `${mins_intervalo}:${segs_intervalo}`
+        title.innerHTML = `${mins_intervalo}:${segs_intervalo} - Intervalo Para Estudos`
 
         if (--segs_intervalo < 10) {
             if (segs_intervalo < 0) {
@@ -26,6 +27,7 @@ btn_intervalo.addEventListener('click', function () {
                 if (mins_intervalo < 10) {
                     if (mins_intervalo < 0) {
                         clearInterval(parar_intervalo)
+                        estudosEncerrados()
                         mins_intervalo = 0
                     } else {
                         mins_intervalo = '0' + mins_intervalo

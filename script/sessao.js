@@ -3,9 +3,10 @@ let container_sessao = document.getElementById('containerSessao')
 let total_sessao = document.getElementById('totalSessao')
 let btn_parar = document.getElementById('btn-parar')
 
-btn_parar.addEventListener('click', function () {
+function btnClick() {
     clearInterval(parar_cronometro)
     container_tempo.style.display = 'none'
+    title.innerHTML = 'Cronômetro Para Estudos'
 
     let data_fim = new Date
     let horas_fim = data_fim.getHours()
@@ -17,11 +18,11 @@ btn_parar.addEventListener('click', function () {
         carregando.style.display = 'block'
     }
     setTimeout(spinner, 500)
-    
+
     function dadosSessao() {
         carregando.style.display = 'none'
         container_sessao.style.display = 'flex'
         total_sessao.textContent = `${horas_inicio}:${mins_inicio} - ${horas_fim}:${mins_fim}`
     }
     setTimeout(dadosSessao, 2500)
-})
+}

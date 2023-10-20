@@ -1,3 +1,13 @@
+@font-face {
+    font-family: 'DS-Digital Bold';
+    src: url(../fonte/DS-DIGIB.TTF);
+}
+
+@font-face {
+    font-family: 'DS-Digital';
+    src: url(../fonte/DS-DIGI.TTF);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -49,14 +59,19 @@ span {
 }
 
 .botoes {
+    text-align: center;
+    padding: 10px 0;
     background-color: #ffa500;
-    font-size: 1.2rem;
-    padding: 10px 40px;
     border: 1px solid #ffffff;
     border-radius: 10px;
     color: #000000;
     font-weight: bold;
     cursor: pointer;
+}
+
+#btn-ok {
+    width: 100px;
+    font-size: 1.2rem;
 }
 
 #containerTempo {
@@ -67,8 +82,15 @@ span {
 }
 
 #cronometro {
-    font-size: 9rem;
-    font-weight: bold;
+    width: 650px;
+    text-align: center;
+    font-family: 'DS-Digital Bold';
+    font-size: 15rem;
+}
+
+#btn-parar {
+    width: 150px;
+    font-size: 1.3rem;
 }
 
 #carregando {
@@ -98,10 +120,10 @@ span {
 }
 
 #totalSessao {
+    width: 900px;
+    font-family: 'DS-Digital Bold';
     text-align: center;
-    font-size: 7rem;
-    font-weight: bold;
-    padding: 10px 40px;
+    font-size: 10rem;
     border: 2px solid #ffa500;
     border-radius: 10px;
 }
@@ -109,6 +131,12 @@ span {
 .btns-sessao {
     display: flex;
     gap: 40px;
+}
+
+.btns-sessao button,
+#btn-novaSessao {
+    width: 200px;
+    font-size: 1.2rem;
 }
 
 #containerIntervalo {
@@ -119,9 +147,15 @@ span {
 }
 
 #timerIntervalo {
-    font-size: 9rem;
-    font-weight: bold;
-    padding: 0 40px;
+    width: 500px;
+    text-align: center;
+    font-family: 'DS-Digital Bold';
+    font-size: 12rem;
+}
+
+#containerIntervalo button {
+    width: 170px;
+    font-size: 1.2rem;
 }
 
 #containerEncerrado {
@@ -149,14 +183,10 @@ span {
     font-weight: bold;
 }
 
-@media screen and (max-width:1050px) {
-    #cronometro {
-        font-size: 7rem;
-    }
-
+@media screen and (max-width:1010px) {
     #totalSessao {
-        font-size: 6rem;
-        padding: 10px 20px;
+        width: 800px;
+        font-size: 9rem;
     }
 }
 
@@ -170,14 +200,15 @@ span {
     }
 
     #totalSessao {
-        font-size: 5rem;
-        padding: 10px 15px;
+        width: 700px;
+        font-size: 7.5rem;
     }
 }
 
 @media screen and (max-width:780px) {
     #cronometro {
-        font-size: 5.5rem;
+        width: 550px;
+        font-size: 13rem;
     }
 
     #containerSessao {
@@ -189,23 +220,30 @@ span {
     }
 
     #totalSessao {
-        font-size: 4rem;
-        padding: 10px 15px;
+        width: 550px;
+        font-size: 6.2rem;
     }
 }
 
 @media screen and (max-width:650px) {
+    #cronometro {
+        width: 450px;
+        font-size: 11rem;
+    }
+
     #totalSessao {
-        font-size: 3rem;
-        padding: 10px 15px;
+        width: 500px;
+        font-size: 5.2rem;
+    }
+
+    .btns-sessao {
+        display: flex;
+        gap: 20px;
     }
 
     .btns-sessao button {
+        width: 150px;
         font-size: 1rem;
-    }
-
-    #timerIntervalo {
-        font-size: 8rem;
     }
 }
 
@@ -219,11 +257,7 @@ span {
     }
 
     #containerTempo {
-        gap: 3.5rem;
-    }
-
-    #cronometro {
-        font-size: 4.5rem;
+        gap: 4.5rem;
     }
 
     #containerIntervalo {
@@ -231,16 +265,44 @@ span {
     }
 
     #timerIntervalo {
-        font-size: 7rem;
+        width: 400px;
+        font-size: 9rem;
     }
 
     #containerIntervalo button {
-        font-size: 0.9rem;
-        padding: 10px 15px;
+        width: 130px;
+        font-size: 1rem;
     }
 
     #containerEncerrado {
         gap: 3rem;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    #cronometro {
+        font-family: 'DS-Digital';
+        width: 400px;
+        font-size: 9rem;
+    }
+
+    #btn-parar {
+        width: 120px;
+        font-size: 1.1rem;
+    }
+
+    #totalSessao {
+        width: 400px;
+        font-size: 4rem;
+    }
+
+    .btns-sessao button {
+        width: 100px;
+        font-size: 0.8rem;
+    }
+
+    #timerIntervalo {
+        font-family: 'DS-Digital';
     }
 }
 
@@ -257,8 +319,9 @@ span {
         font-size: 2.5rem;
     }
 
-    #btn-parar {
-        font-size: 1rem;
+    #btn-ok {
+        width: 80px;
+        font-size: 1.1rem;
     }
 
     #containerSessao {
@@ -266,39 +329,38 @@ span {
     }
 
     #totalSessao {
-        font-size: 2.7rem;
-        padding: 5px;
+        width: 350px;
+        font-size: 3.5rem;
     }
 
     .btns-sessao {
         gap: 1rem;
     }
 
-    .btns-sessao button {
-        padding: 10px 15px;
-    }
-
     #timerIntervalo {
-        font-size: 6rem;
-    }
-
-    #btn-novaSessao {
-        font-size: 0.9rem;
-        padding: 10px 15px;
+        width: 350px;
+        font-size: 8.2rem;
     }
 }
 
-@media screen and (max-width:440px) {
+@media screen and (max-width:450px) {
     #cronometro {
-        font-size: 3.5rem;
+        width: 320px;
+        font-size: 7rem;
+    }
+
+    #btn-parar {
+        width: 100px;
+        font-size: 1rem;
     }
 
     #totalSessao {
-        font-size: 2.5rem;
+        width: 320px;
     }
 
     #timerIntervalo {
-        font-size: 4.5rem;
+        width: 300px;
+        font-size: 7.2rem;
     }
 
     .dadosContainer {
@@ -309,9 +371,14 @@ span {
     .dadosContainer p {
         font-size: 0.8rem;
     }
+
+    #btn-novaSessao {
+        width: 150px;
+        font-size: 1rem;
+    }
 }
 
-@media screen and (max-width:370px) {
+@media screen and (max-width:380px) {
     .titulos {
         font-size: 2rem;
     }
@@ -329,47 +396,82 @@ span {
         font-size: 0.6rem;
     }
 
-    #cronometro {
-        font-size: 2.5rem;
+    #btn-ok {
+        width: 60px;
+        font-size: 1rem;
     }
 
-    #btn-parar {
-        font-size: 0.8rem;
+    #cronometro {
+        width: 260px;
+        font-size: 5.5rem;
     }
 
     #totalSessao {
-        font-size: 2rem;
+        width: 300px;
+        font-size: 3rem;
     }
 
     .btns-sessao button {
-        font-size: 0.7rem;
+        width: 80px;
+        font-size: 0.6rem;
+    }
+
+    .totalEncerrado {
+        width: 14rem;
+        height: 10rem;
+        padding: 0 5px;
+        gap: 30px;
+    }
+
+    .totalEncerrado p {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    #totalSessao {
+        width: 250px;
+        font-size: 2.5rem;
+    }
+
+    #timerIntervalo {
+        width: 250px;
+        font-size: 5rem;
+    }
+
+    #containerIntervalo button {
+        width: 110px;
+        font-size: 0.8rem;
     }
 }
 
 @media screen and (max-width:310px) {
-    .titulos {
-        font-size: 1.7rem;
+    #cronometro {
+        width: 230px;
+        font-size: 4.5rem;
     }
 
-    .botoes {
+    #btn-parar {
+        width: 85px;
         font-size: 0.8rem;
-        padding: 10px 25px;
+    }
+
+    .titulos {
+        font-size: 1.7rem;
     }
 
     #containerSessao h1 {
         font-size: 2rem;
     }
 
-    #totalSessao {
-        font-size: 1.5rem;
-    }
-
-    .btns-sessao button {
-        font-size: 0.5rem;
-    }
-
     #timerIntervalo {
+        width: 200px;
         font-size: 4rem;
+    }
+
+    #containerIntervalo button {
+        width: 100px;
+        font-size: 0.7rem;
     }
 }
 
@@ -383,6 +485,21 @@ span {
     }
 
     #cronometro {
+        width: 200px;
+        font-size: 4rem;
+    }
+
+    #totalSessao {
+        width: 200px;
         font-size: 2rem;
+    }
+
+    .totalEncerrado {
+        width: 12rem;
+        height: 9rem;
+    }
+
+    .totalEncerrado p {
+        font-size: 0.7rem;
     }
 }
