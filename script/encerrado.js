@@ -38,8 +38,8 @@ function estudosEncerrados() {
             dados_totais.innerText = `Total: ${mins_totais} Minutos`
         } else {
             dados_estudando.innerText = `Estudando: ${mins_totais} Minutos`
-            dados_intervalo.innerText = `Intervalo: ${(14 - intervalo_total)} Minutos`
-            dados_totais.innerText = `Total: ${(mins_totais + (14 - intervalo_total))} Minutos`
+            dados_intervalo.innerText = `Intervalo: ${(15 - intervalo_total)} Minutos`
+            dados_totais.innerText = `Total: ${(mins_totais + (15 - intervalo_total))} Minutos`
         }
     }
     setTimeout(dadosText, 1000)
